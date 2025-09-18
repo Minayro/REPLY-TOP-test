@@ -268,6 +268,25 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
+    // Testimonials read more functionality
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const testimonialText = this.previousElementSibling;
+            const moreContent = testimonialText.querySelector('.testimonial-more');
+            
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'inline';
+                this.textContent = 'Скрыть';
+                this.classList.add('expanded');
+            } else {
+                moreContent.style.display = 'none';
+                this.textContent = 'Читать далее';
+                this.classList.remove('expanded');
+            }
+        });
+    });
+
     // Add ripple effect styles
     const style = document.createElement('style');
     style.textContent = `
