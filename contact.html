@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты RE:PLY - Свяжитесь с нами</title>
+    <meta name="description" content="Свяжитесь с командой RE:PLY для получения консультации по автоматизации работы с отзывами на маркетплейсах">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="demo.html" class="nav-link">Демо</a>
+                    <a href="pricing.html" class="nav-link">Тарифы</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="login.html" class="btn btn-primary">Начать бесплатно</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Свяжитесь с нами</h1>
+                <p class="contact-subtitle">Готовы ответить на ваши вопросы и помочь с настройкой RE:PLY</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Получите консультацию</h2>
+                    <p>Наша команда экспертов готова помочь вам настроить RE:PLY под ваши потребности и ответить на все вопросы.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#00BFA5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>hello@reply.ru</p>
+                                <span>Ответим в течение 2 часов</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#00BFA5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Телефон</h3>
+                                <p>+7 (495) 123-45-67</p>
+                                <span>Пн-Пт с 9:00 до 18:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5S14.5 7.62 14.5 9S13.38 11.5 12 11.5Z" fill="#00BFA5"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Офис</h3>
+                                <p>Москва, ул. Примерная, 123</p>
+                                <span>Прием по предварительной записи</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Напишите нам</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">Имя *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Фамилия *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" class="form-label">Компания</label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Тема *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Выберите тему</option>
+                                <option value="demo">Запрос демонстрации</option>
+                                <option value="pricing">Вопросы по тарифам</option>
+                                <option value="integration">Интеграция с маркетплейсами</option>
+                                <option value="support">Техническая поддержка</option>
+                                <option value="partnership">Партнерство</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Сообщение *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Расскажите подробнее о вашем запросе..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">Я согласен с <a href="#" class="privacy-link">политикой конфиденциальности</a> *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full btn-large">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle">Быстрые ответы на популярные вопросы</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Как быстро можно начать использовать RE:PLY?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Настройка занимает всего 15-30 минут. После регистрации вы подключаете свои маркетплейсы через API-ключи, и система сразу начинает собирать отзывы.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Какие маркетплейсы поддерживаются?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы поддерживаем Ozon, Wildberries, Яндекс.Маркет, AliExpress и другие популярные площадки. Полный список доступен в личном кабинете.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Безопасно ли передавать API-ключи?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, все данные шифруются и хранятся в соответствии с международными стандартами безопасности. API-ключи используются только для чтения отзывов.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли настроить автоматические ответы?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, вы можете настроить шаблоны ответов для разных типов отзывов или использовать ИИ-генерацию ответов на основе анализа тональности.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Готовы начать?</h2>
+                <p class="cta-subtitle">Присоединяйтесь к тысячам продавцов, которые уже автоматизировали работу с отзывами</p>
+                <div class="cta-actions">
+                    <a href="login.html" class="btn btn-primary btn-large">Начать бесплатно</a>
+                    <a href="demo.html" class="btn btn-outline btn-large">Посмотреть демо</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                    </div>
+                    <p class="footer-description">
+                        Автоматизируйте работу с отзывами на маркетплейсах с помощью ИИ-анализа и умных ответов
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Продукт</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Возможности</a></li>
+                        <li><a href="demo.html">Демо</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Центр помощи</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="contact-info">
+                        <p>📧 hello@reply.ru</p>
+                        <p>📞 +7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Validate required fields
+            if (!data.firstName || !data.lastName || !data.email || !data.subject || !data.message || !data.privacy) {
+                showNotification('Пожалуйста, заполните все обязательные поля', 'error');
+                return;
+            }
+            
+            // Simulate form submission
+            showNotification('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.', 'success');
+            this.reset();
+        });
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+
+            question.addEventListener('click', function() {
+                const isOpen = answer.style.maxHeight;
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current item
+                if (isOpen) {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

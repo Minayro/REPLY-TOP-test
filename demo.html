@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация RE:PLY - Посмотрите как это работает</title>
+    <meta name="description" content="Демонстрация возможностей RE:PLY - автоматизация работы с отзывами на маркетплейсах">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="pricing.html" class="nav-link">Тарифы</a>
+                    <a href="contact.html" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="login.html" class="btn btn-primary">Начать бесплатно</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Demo Hero Section -->
+    <section class="demo-hero">
+        <div class="container">
+            <div class="demo-hero-content">
+                <h1 class="demo-title">Посмотрите RE:PLY в действии</h1>
+                <p class="demo-subtitle">Интерактивная демонстрация всех возможностей платформы</p>
+                <div class="demo-controls">
+                    <button class="btn btn-primary" onclick="startDemo()">Запустить демо</button>
+                    <button class="btn btn-outline" onclick="scrollToFeatures()">Показать возможности</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="interactive-demo">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-sidebar">
+                    <h3>Сценарии демонстрации</h3>
+                    <div class="demo-scenarios">
+                        <button class="scenario-btn active" data-scenario="reviews">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z" fill="#00BFA5"/>
+                            </svg>
+                            Работа с отзывами
+                        </button>
+                        <button class="scenario-btn" data-scenario="analytics">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z" fill="#4A5568"/>
+                            </svg>
+                            Аналитика
+                        </button>
+                        <button class="scenario-btn" data-scenario="automation">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#4A5568"/>
+                            </svg>
+                            Автоматизация
+                        </button>
+                        <button class="scenario-btn" data-scenario="integration">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z" fill="#4A5568"/>
+                            </svg>
+                            Интеграции
+                        </button>
+                    </div>
+                </div>
+
+                <div class="demo-main">
+                    <div class="demo-screen" id="demoScreen">
+                        <!-- Reviews Demo -->
+                        <div class="demo-content active" id="reviews-demo">
+                            <div class="demo-header">
+                                <h4>Работа с отзывами</h4>
+                                <div class="demo-stats">
+                                    <span class="stat">📊 1,247 отзывов</span>
+                                    <span class="stat">⚡ 95% автоматизировано</span>
+                                </div>
+                            </div>
+                            <div class="demo-table">
+                                <div class="table-header">
+                                    <div class="table-cell">Товар</div>
+                                    <div class="table-cell">Дата</div>
+                                    <div class="table-cell">Отзыв</div>
+                                    <div class="table-cell">Анализ ИИ</div>
+                                    <div class="table-cell">Действие</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell product">Наушники SoundMax Pro</div>
+                                    <div class="table-cell date">07.06.2025</div>
+                                    <div class="table-cell review">Отличное качество звука, удобные...</div>
+                                    <div class="table-cell analysis positive">😊 Позитивный</div>
+                                    <div class="table-cell action">
+                                        <button class="btn btn-sm btn-primary">Ответить</button>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell product">Наушники SoundMax Pro</div>
+                                    <div class="table-cell date">06.06.2025</div>
+                                    <div class="table-cell review">После недели использования одно ухо...</div>
+                                    <div class="table-cell analysis negative">😞 Негативный</div>
+                                    <div class="table-cell action">
+                                        <button class="btn btn-sm btn-outline">Требует внимания</button>
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell product">Наушники SoundMax Pro</div>
+                                    <div class="table-cell date">05.06.2025</div>
+                                    <div class="table-cell review">Нормальные наушники за свои деньги</div>
+                                    <div class="table-cell analysis neutral">😐 Нейтральный</div>
+                                    <div class="table-cell action">
+                                        <button class="btn btn-sm btn-outline">Ответить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analytics Demo -->
+                        <div class="demo-content" id="analytics-demo">
+                            <div class="demo-header">
+                                <h4>Аналитика и отчеты</h4>
+                                <div class="demo-stats">
+                                    <span class="stat">📈 +15% рейтинг</span>
+                                    <span class="stat">🎯 87% точность</span>
+                                </div>
+                            </div>
+                            <div class="analytics-grid">
+                                <div class="analytics-card">
+                                    <h5>Тональность отзывов</h5>
+                                    <div class="chart-container">
+                                        <div class="chart-bar positive" style="width: 65%"></div>
+                                        <div class="chart-bar neutral" style="width: 25%"></div>
+                                        <div class="chart-bar negative" style="width: 10%"></div>
+                                    </div>
+                                    <div class="chart-labels">
+                                        <span>65% Позитивные</span>
+                                        <span>25% Нейтральные</span>
+                                        <span>10% Негативные</span>
+                                    </div>
+                                </div>
+                                <div class="analytics-card">
+                                    <h5>Ключевые темы</h5>
+                                    <div class="topics-list">
+                                        <div class="topic-item">
+                                            <span class="topic-name">Качество звука</span>
+                                            <span class="topic-count">45%</span>
+                                        </div>
+                                        <div class="topic-item">
+                                            <span class="topic-name">Удобство</span>
+                                            <span class="topic-count">32%</span>
+                                        </div>
+                                        <div class="topic-item">
+                                            <span class="topic-name">Цена</span>
+                                            <span class="topic-count">23%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Automation Demo -->
+                        <div class="demo-content" id="automation-demo">
+                            <div class="demo-header">
+                                <h4>Автоматические ответы</h4>
+                                <div class="demo-stats">
+                                    <span class="stat">🤖 89% автоматизировано</span>
+                                    <span class="stat">⚡ 2.3 сек среднее время</span>
+                                </div>
+                            </div>
+                            <div class="automation-demo">
+                                <div class="response-templates">
+                                    <h5>Шаблоны ответов</h5>
+                                    <div class="template-list">
+                                        <div class="template-item">
+                                            <div class="template-trigger">Негативный отзыв</div>
+                                            <div class="template-response">
+                                                "Благодарим за отзыв! Нам жаль, что вы столкнулись с проблемой. Мы уже передали информацию в отдел качества и свяжемся с вами для решения."
+                                            </div>
+                                        </div>
+                                        <div class="template-item">
+                                            <div class="template-trigger">Позитивный отзыв</div>
+                                            <div class="template-response">
+                                                "Спасибо за отзыв! Рады, что товар вам понравился. Ждем новых покупок!"
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Integration Demo -->
+                        <div class="demo-content" id="integration-demo">
+                            <div class="demo-header">
+                                <h4>Интеграции с маркетплейсами</h4>
+                                <div class="demo-stats">
+                                    <span class="stat">🔗 5 площадок</span>
+                                    <span class="stat">📊 2,341 товар</span>
+                                </div>
+                            </div>
+                            <div class="integrations-grid">
+                                <div class="integration-card">
+                                    <div class="integration-logo">OZON</div>
+                                    <div class="integration-status connected">Подключено</div>
+                                    <div class="integration-stats">1,247 отзывов</div>
+                                </div>
+                                <div class="integration-card">
+                                    <div class="integration-logo">Wildberries</div>
+                                    <div class="integration-status connected">Подключено</div>
+                                    <div class="integration-stats">856 отзывов</div>
+                                </div>
+                                <div class="integration-card">
+                                    <div class="integration-logo">Яндекс.Маркет</div>
+                                    <div class="integration-status connected">Подключено</div>
+                                    <div class="integration-stats">238 отзывов</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Готовы попробовать RE:PLY?</h2>
+                <p class="cta-subtitle">Начните бесплатно и убедитесь в эффективности платформы</p>
+                <div class="cta-actions">
+                    <a href="login.html" class="btn btn-primary btn-large">Начать бесплатно</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                    </div>
+                    <p class="footer-description">
+                        Автоматизируйте работу с отзывами на маркетплейсах с помощью ИИ-анализа и умных ответов
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Продукт</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Возможности</a></li>
+                        <li><a href="demo.html">Демо</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Центр помощи</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="contact-info">
+                        <p>📧 hello@reply.ru</p>
+                        <p>📞 +7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Demo scenario switching
+        const scenarioButtons = document.querySelectorAll('.scenario-btn');
+        const demoContents = document.querySelectorAll('.demo-content');
+
+        scenarioButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const scenario = this.dataset.scenario;
+                
+                // Update active button
+                scenarioButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update active content
+                demoContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(scenario + '-demo').classList.add('active');
+                
+                // Update button icons
+                scenarioButtons.forEach(btn => {
+                    const icon = btn.querySelector('svg path');
+                    icon.setAttribute('fill', '#4A5568');
+                });
+                this.querySelector('svg path').setAttribute('fill', '#00BFA5');
+            });
+        });
+
+        function startDemo() {
+            document.querySelector('.interactive-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToFeatures() {
+            document.querySelector('.interactive-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

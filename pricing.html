@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифы RE:PLY - Выберите подходящий план</title>
+    <meta name="description" content="Тарифные планы RE:PLY для автоматизации работы с отзывами на маркетплейсах. Стартовый, Профессиональный и Бизнес планы.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="demo.html" class="nav-link">Демо</a>
+                    <a href="contact.html" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="login.html" class="btn btn-primary">Начать бесплатно</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="pricing-hero-content">
+                <h1 class="pricing-title">Выберите подходящий тариф</h1>
+                <p class="pricing-subtitle">Начните бесплатно и масштабируйтесь по мере роста бизнеса</p>
+                
+                <div class="billing-toggle">
+                    <span class="billing-label">Ежемесячно</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="billingToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="billing-label">Годовой <span class="discount-badge">-20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Стартовый</h3>
+                        <p class="pricing-description">Для начинающих продавцов</p>
+                        <div class="pricing-price">
+                            <span class="price" id="starter-price">0₽</span>
+                            <span class="period">/месяц</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            До 100 отзывов в месяц
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            1 маркетплейс
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Базовый анализ
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Email поддержка
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Мобильное приложение
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Начать бесплатно</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Профессиональный</h3>
+                        <p class="pricing-description">Для растущего бизнеса</p>
+                        <div class="pricing-price">
+                            <span class="price" id="pro-price">2,990₽</span>
+                            <span class="period">/месяц</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            До 1,000 отзывов в месяц
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            До 3 маркетплейсов
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Полный ИИ-анализ
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Автоматические ответы
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Приоритетная поддержка
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Экспорт отчетов
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-full">Выбрать план</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Бизнес</h3>
+                        <p class="pricing-description">Для крупных компаний</p>
+                        <div class="pricing-price">
+                            <span class="price" id="business-price">5,990₽</span>
+                            <span class="period">/месяц</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Безлимитные отзывы
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Все маркетплейсы
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Расширенная аналитика
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            API доступ
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Персональный менеджер
+                        </div>
+                        <div class="feature">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="#00BFA5"/>
+                            </svg>
+                            Интеграции с CRM
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Связаться с нами</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle">Ответы на популярные вопросы о тарифах и возможностях</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли изменить тариф в любое время?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, вы можете изменить тариф в любое время. При переходе на более высокий тариф изменения вступают в силу немедленно, а при переходе на более низкий - в начале следующего периода.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что происходит при превышении лимита отзывов?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>При превышении лимита мы уведомим вас и предложим перейти на более высокий тариф. До перехода обработка новых отзывов будет приостановлена.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Есть ли скидки при годовой оплате?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, при годовой оплате вы получаете скидку 20% на все тарифы. Это позволяет значительно сэкономить на подписке.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли отменить подписку?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 14L12 9L17 14" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, вы можете отменить подписку в любое время в личном кабинете. Доступ к функциям сохранится до конца оплаченного периода.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Готовы начать?</h2>
+                <p class="cta-subtitle">Выберите тариф и начните автоматизировать работу с отзывами уже сегодня</p>
+                <div class="cta-actions">
+                    <a href="login.html" class="btn btn-primary btn-large">Начать бесплатно</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Задать вопрос</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
+                    </div>
+                    <p class="footer-description">
+                        Автоматизируйте работу с отзывами на маркетплейсах с помощью ИИ-анализа и умных ответов
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Продукт</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Возможности</a></li>
+                        <li><a href="demo.html">Демо</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Поддержка</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Центр помощи</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="contact-info">
+                        <p>📧 hello@reply.ru</p>
+                        <p>📞 +7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Billing toggle functionality
+        const billingToggle = document.getElementById('billingToggle');
+        const prices = {
+            starter: { monthly: '0₽', yearly: '0₽' },
+            pro: { monthly: '2,990₽', yearly: '2,392₽' },
+            business: { monthly: '5,990₽', yearly: '4,792₽' }
+        };
+
+        billingToggle.addEventListener('change', function() {
+            const isYearly = this.checked;
+            document.getElementById('starter-price').textContent = prices.starter[isYearly ? 'yearly' : 'monthly'];
+            document.getElementById('pro-price').textContent = prices.pro[isYearly ? 'yearly' : 'monthly'];
+            document.getElementById('business-price').textContent = prices.business[isYearly ? 'yearly' : 'monthly'];
+        });
+
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+
+            question.addEventListener('click', function() {
+                const isOpen = answer.style.maxHeight;
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current item
+                if (isOpen) {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
