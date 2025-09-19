@@ -40,9 +40,25 @@
                     <button class="btn btn-outline">Войти</button>
                     <button class="btn btn-primary">Начать бесплатно</button>
                 </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="nav-mobile" id="navMobile">
+        <button class="mobile-close" id="mobileClose">×</button>
+        <a href="#features" class="nav-link">Возможности</a>
+        <a href="#how-it-works" class="nav-link">Как это работает</a>
+        <a href="#testimonials" class="nav-link">Отзывы</a>
+        <a href="#pricing" class="nav-link">Тарифы</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+        <div class="mobile-actions">
+            <button class="btn btn-outline">Войти</button>
+            <button class="btn btn-primary">Начать бесплатно</button>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -74,49 +90,70 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="dashboard-preview">
-                        <div class="dashboard-header">
-                            <div class="dashboard-logo">
-                                <span class="logo-re">RE</span><span class="logo-colon">:</span><span class="logo-ply">PLY</span>
-                            </div>
-                            <div class="dashboard-user">
-                                <span class="user-name">Анисимова Ксения</span>
-                                <div class="user-avatar"></div>
-                            </div>
-                        </div>
-                        <div class="dashboard-tabs">
-                            <div class="tab active">Работа с отзывами</div>
-                            <div class="tab">Товары</div>
-                        </div>
-                        <div class="dashboard-content">
-                            <div class="reviews-table">
-                                <div class="table-header">
-                                    <div class="table-cell">Товар</div>
-                                    <div class="table-cell">Дата</div>
-                                    <div class="table-cell">Отзыв</div>
-                                    <div class="table-cell">Оценка</div>
-                                    <div class="table-cell">Ответ</div>
-                                    <div class="table-cell">Статус</div>
-                                </div>
-                                <div class="table-row">
-                                    <div class="table-cell product">Наушники SoundMax Pro</div>
-                                    <div class="table-cell date">07.06.2025</div>
-                                    <div class="table-cell review">Отличное качество звука, удобные...</div>
-                                    <div class="table-cell rating">⭐⭐⭐⭐⭐</div>
-                                    <div class="table-cell reply">Спасибо за отзыв!</div>
-                                    <div class="table-cell status sent">Отправлено</div>
-                                </div>
-                                <div class="table-row">
-                                    <div class="table-cell product">Наушники SoundMax Pro</div>
-                                    <div class="table-cell date">06.06.2025</div>
-                                    <div class="table-cell review">После недели использования одно ухо...</div>
-                                    <div class="table-cell rating">⭐⭐</div>
-                                    <div class="table-cell reply">Благодарим за отзыв! Мы уже передали...</div>
-                                    <div class="table-cell status error">Ошибка</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="hero-visual">
+                    <svg class="hero-image" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Gradient definitions -->
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00b894;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background -->
+                        <rect width="500" height="400" fill="url(#grad4)" rx="20"/>
+                        
+                        <!-- Floating elements -->
+                        <circle cx="100" cy="80" r="25" fill="url(#grad1)" opacity="0.8">
+                            <animateTransform attributeName="transform" type="translate" 
+                                values="0,0; 0,-10; 0,0" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <rect x="350" y="60" width="40" height="40" fill="url(#grad2)" rx="8" opacity="0.8">
+                            <animateTransform attributeName="transform" type="translate" 
+                                values="0,0; 0,-15; 0,0" dur="4s" repeatCount="indefinite"/>
+                        </rect>
+                        <circle cx="80" cy="300" r="20" fill="url(#grad3)" opacity="0.8">
+                            <animateTransform attributeName="transform" type="translate" 
+                                values="0,0; 0,-8; 0,0" dur="3.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <rect x="400" y="280" width="35" height="35" fill="url(#grad1)" rx="6" opacity="0.8">
+                            <animateTransform attributeName="transform" type="translate" 
+                                values="0,0; 0,-12; 0,0" dur="2.8s" repeatCount="indefinite"/>
+                        </rect>
+                        
+                        <!-- Central dashboard mockup -->
+                        <rect x="150" y="120" width="200" height="160" fill="white" rx="12" opacity="0.95"/>
+                        <rect x="160" y="130" width="180" height="20" fill="#f8f9fa" rx="4"/>
+                        <rect x="160" y="160" width="180" height="8" fill="#e9ecef" rx="2"/>
+                        <rect x="160" y="175" width="140" height="8" fill="#e9ecef" rx="2"/>
+                        <rect x="160" y="190" width="160" height="8" fill="#e9ecef" rx="2"/>
+                        <rect x="160" y="210" width="180" height="8" fill="#28a745" rx="2"/>
+                        <rect x="160" y="225" width="120" height="8" fill="#dc3545" rx="2"/>
+                        <rect x="160" y="240" width="170" height="8" fill="#00d4aa" rx="2"/>
+                        
+                        <!-- Icons -->
+                        <text x="250" y="200" text-anchor="middle" fill="#00d4aa" font-size="24">📊</text>
+                        <text x="200" y="250" text-anchor="middle" fill="#667eea" font-size="20">⭐</text>
+                        <text x="300" y="250" text-anchor="middle" fill="#f5576c" font-size="20">💬</text>
+                    </svg>
+                    
+                    <div class="hero-floating-elements">
+                        <div class="floating-icon">📱</div>
+                        <div class="floating-icon">⭐</div>
+                        <div class="floating-icon">💬</div>
+                        <div class="floating-icon">📊</div>
                     </div>
                 </div>
             </div>
@@ -132,58 +169,32 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">📊</div>
                     <h3 class="feature-title">Единое окно для отзывов</h3>
                     <p class="feature-description">Автоматический сбор всех отзывов с Ozon, Wildberries, Яндекс.Маркет и других площадок в одном личном кабинете</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#00BFA5"/>
-                            <path d="M19 15L20.09 18.26L23 19L20.09 19.74L19 23L17.91 19.74L15 19L17.91 18.26L19 15Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">🤖</div>
                     <h3 class="feature-title">ИИ-анализ отзывов</h3>
                     <p class="feature-description">Машинное обучение анализирует тональность, выделяет ключевые проблемы и генерирует подробные отчеты с рекомендациями</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">⚡</div>
                     <h3 class="feature-title">Автоматические ответы</h3>
                     <p class="feature-description">Система сама отвечает на отзывы или готовит черновики ответов, используя шаблоны или ИИ-генерацию</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">🛡️</div>
                     <h3 class="feature-title">Модерация контента</h3>
                     <p class="feature-description">Встроенные фильтры выявляют спам, оскорбления и нерелевантные отзывы, помечая их для продавца</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">📈</div>
                     <h3 class="feature-title">Детальная аналитика</h3>
                     <p class="feature-description">Наглядные отчеты показывают тенденции, рейтинги товаров и помогают принимать решения на основе данных</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z" fill="#00BFA5"/>
-                            <path d="M7 9H17V11H7V9ZM7 12H15V14H7V12Z" fill="#00BFA5"/>
-                        </svg>
-                    </div>
+                    <div class="feature-image">💬</div>
                     <h3 class="feature-title">Стимулирование отзывов</h3>
                     <p class="feature-description">Упрощаем процесс написания отзывов для клиентов с помощью шаблонов и интерактивных элементов</p>
                 </div>
@@ -200,21 +211,30 @@
             </div>
             <div class="steps">
                 <div class="step">
-                    <div class="step-number">1</div>
+                    <div class="step-image">
+                        🔗
+                        <div class="step-number">1</div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Подключите маркетплейсы</h3>
                         <p class="step-description">Добавьте свои магазины с Ozon, Wildberries, Яндекс.Маркет через API-ключи</p>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
+                    <div class="step-image">
+                        ⚙️
+                        <div class="step-number">2</div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Настройте автоматизацию</h3>
                         <p class="step-description">Выберите товары для отслеживания и настройте шаблоны ответов</p>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">3</div>
+                    <div class="step-image">
+                        📈
+                        <div class="step-number">3</div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Получайте аналитику</h3>
                         <p class="step-description">Просматривайте отчеты и рекомендации по улучшению товаров</p>

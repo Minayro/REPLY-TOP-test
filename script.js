@@ -268,24 +268,53 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
-    // Testimonials read more functionality
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const testimonialText = this.previousElementSibling;
-            const moreContent = testimonialText.querySelector('.testimonial-more');
-            
-            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
-                moreContent.style.display = 'inline';
-                this.textContent = 'Скрыть';
-                this.classList.add('expanded');
-            } else {
-                moreContent.style.display = 'none';
-                this.textContent = 'Читать далее';
-                this.classList.remove('expanded');
-            }
-        });
+// Mobile menu functionality
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navOverlay = document.getElementById('navOverlay');
+const navMobile = document.getElementById('navMobile');
+const mobileClose = document.getElementById('mobileClose');
+
+if (mobileMenuBtn && navOverlay && navMobile && mobileClose) {
+    mobileMenuBtn.addEventListener('click', function() {
+        navOverlay.classList.add('active');
+        navMobile.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
+
+    function closeMobileMenu() {
+        navOverlay.classList.remove('active');
+        navMobile.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    mobileClose.addEventListener('click', closeMobileMenu);
+    navOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on navigation links
+    const mobileNavLinks = navMobile.querySelectorAll('.nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+}
+
+// Testimonials read more functionality
+const readMoreButtons = document.querySelectorAll('.read-more-btn');
+readMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const testimonialText = this.previousElementSibling;
+        const moreContent = testimonialText.querySelector('.testimonial-more');
+        
+        if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'inline';
+            this.textContent = 'Скрыть';
+            this.classList.add('expanded');
+        } else {
+            moreContent.style.display = 'none';
+            this.textContent = 'Читать далее';
+            this.classList.remove('expanded');
+        }
+    });
+});
 
     // Add ripple effect styles
     const style = document.createElement('style');
